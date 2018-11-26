@@ -1,0 +1,7 @@
+---
+# defaults file for 1c-web
+erp_fqdn: erp.local
+docmng_base: docmng_test
+erp_base: erp_test
+erp_path: erp
+docmng_path: docmng

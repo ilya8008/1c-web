@@ -1,0 +1,4 @@
+---
+# tasks file for 1c-web
+- include: install_apache2.yml
+- include: install_1c.yml

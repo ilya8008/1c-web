@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /opt/1C/v8.3/x86_64/
+if [ ! -e /var/www/{{ docmng_path }} ] 
+    then
+        ./webinst -apache24 -wsdir {{ docmng_path }} -dir /var/www/{{ docmng_path }} -connstr "Srvr={{ erp_fqdn }};Ref={{ docmng_base }};" -confpath /etc/httpd/conf/httpd.conf
+fi
+if [ ! -e /var/www/{{ erp_path }} ]
+    then
+        ./webinst -apache24 -wsdir {{ erp_path }} -dir /var/www/{{ erp_path }} -connstr "Srvr={{ erp_fqdn }};Ref={{ erp_base }};" -confpath /etc/httpd/conf/httpd.conf
+fi

@@ -1,0 +1,31 @@
+---
+- name: Copy script template
+  template:
+    src: webinst.sh.j2
+    dest: /tmp/webinst.sh
+    mode: u+x
+
+- name: Execute script
+  shell: /tmp/webinst.sh
+
+- name: Remove script
+  file:
+    path: /tmp/webinst.sh
+    state: absent
+
+- name: Copy docmng default.vrd
+  template:
+    src: default.vrd.docmng.j2
+    dest: /var/www/{{ docmng_path }}/default.vrd
+    force: no
+
+- name: Copy erp default.vrd
+  template:
+    src: default.vrd.erp.j2
+    dest: /var/www/{{ erp_path }}/default.vrd
+    force: no
+
+- name: Restart httpd service
+  service:
+    name: httpd
+    state: reloaded

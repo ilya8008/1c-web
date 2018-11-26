@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<point xmlns="http://v8.1c.ru/8.2/virtual-resource-system"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		base="/{{ docmng_path }}"
+		ib="Srvr={{ erp_fqdn }};Ref={{ docmng_base }};">
+	<standardOdata enable="false"
+			reuseSessions="autouse"
+			sessionMaxAge="20"
+			poolSize="10"
+			poolTimeout="5"/>
+	<ws>
+		<point name="MobileDMVersionService"
+				alias="mobileDMVersionService.1cws"
+				enable="true"/>
+		<point name="MEDO1C"
+				alias="medo1c.1cws"
+				enable="true"/>
+		<point name="MEDO"
+				alias="medo.1cws"
+				enable="true"/>
+		<point name="AddressSystem"
+				alias="AddressSystem.1cws"
+				enable="true"/>
+		<point name="DMService"
+				alias="dm.1cws"
+				enable="true"/>
+		<point name="MEDO2013"
+				alias="medo2013.1cws"
+				enable="true"/>
+		<point name="DMMessageService"
+				alias="dmmessage.1cws"
+				enable="true"/>
+		<point name="EnterpriseDataExchange_1_0_1_1"
+				alias="EnterpriseDataExchange_1_0_1_1.1cws"
+				enable="true"/>
+		<point name="DMX"
+				alias="DMX.1cws"
+				enable="true"/>
+		<point name="Exchange_2_0_1_6"
+				alias="exchange_2_0_1_6.1cws"
+				enable="true"/>
+		<point name="EnterpriseDataUpload_1_0_1_1"
+				alias="EnterpriseDataUpload_1_0_1_1.1cws"
+				enable="true"/>
+		<point name="Files"
+				alias="files.1cws"
+				enable="true"/>
+		<point name="Exchange"
+				alias="exchange.1cws"
+				enable="true"/>
+		<point name="InterfaceVersion"
+				alias="InterfaceVersion.1cws"
+				enable="true"/>
+	</ws>
+</point>
