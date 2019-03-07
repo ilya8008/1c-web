@@ -17,13 +17,13 @@
   template:
     src: default.vrd.docmng.j2
     dest: /var/www/{{ docmng_path }}/default.vrd
-    force: no
+    force: yes
 
 - name: Copy erp default.vrd
   template:
     src: default.vrd.erp.j2
     dest: /var/www/{{ erp_path }}/default.vrd
-    force: no
+    force: yes
 
 - name: Restart httpd service
   service:
